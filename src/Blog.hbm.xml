@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-7-21 23:35:04 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="blogsystem" dynamic-insert="false" dynamic-update="false" mutable="true" name="Blog" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="blog">
+        <id name="blogId" type="java.lang.Integer">
+            <column name="blog_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="blogTitle" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="blog_title" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="blogText" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="blog_text" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="blogVisit" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="blog_visit"/>
+        </property>
+        <property generated="never" lazy="false" name="userId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="user_id"/>
+        </property>
+        <property generated="never" lazy="false" name="blogDate" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="blog_date"/>
+        </property>
+        <property generated="never" lazy="false" name="blogPv" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="blog_pv"/>
+        </property>
+    </class>
+</hibernate-mapping>

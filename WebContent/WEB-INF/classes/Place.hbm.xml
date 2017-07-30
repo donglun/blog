@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-7-21 23:35:04 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="blogsystem" dynamic-insert="false" dynamic-update="false" mutable="true" name="Place" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="place">
+        <id name="placeId" type="java.lang.Integer">
+            <column name="place_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="province" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="province"/>
+        </property>
+        <property generated="never" lazy="false" name="city" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="city"/>
+        </property>
+        <property generated="never" lazy="false" name="area" optimistic-lock="true" type="string" unique="false">
+            <column name="area"/>
+        </property>
+    </class>
+</hibernate-mapping>

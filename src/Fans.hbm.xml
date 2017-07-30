@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-7-21 23:35:04 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="blogsystem" dynamic-insert="false" dynamic-update="false" mutable="true" name="Fans" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="fans">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="userId" optimistic-lock="true" type="int" unique="false">
+            <column name="user_id" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="noticerId" optimistic-lock="true" type="int" unique="false">
+            <column name="noticer_id" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="date" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="date" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-7-21 23:35:04 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="blogsystem" dynamic-insert="false" dynamic-update="false" mutable="true" name="Userinfo" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="userinfo">
+        <id name="userinfoId" type="java.lang.Integer">
+            <column name="userinfo_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="userId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="user_id"/>
+        </property>
+        <property generated="never" lazy="false" name="userName" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="user_name"/>
+        </property>
+        <property generated="never" lazy="false" name="userSex" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="user_sex"/>
+        </property>
+        <property generated="never" lazy="false" name="userBirthday" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="user_birthday"/>
+        </property>
+        <property generated="never" lazy="false" name="userJob" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="user_job"/>
+        </property>
+        <property generated="never" lazy="false" name="userPost" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="user_post"/>
+        </property>
+        <property generated="never" lazy="false" name="userIntroduction" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="user_introduction"/>
+        </property>
+        <property generated="never" lazy="false" name="userPlace" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="user_place"/>
+        </property>
+        <property generated="never" lazy="false" name="userImage" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="user_image"/>
+        </property>
+        <property generated="never" lazy="false" name="userRecentLoginTime" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="user_recent_login_time"/>
+        </property>
+        <property generated="never" lazy="false" name="userPv" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="user_PV"/>
+        </property>
+    </class>
+</hibernate-mapping>

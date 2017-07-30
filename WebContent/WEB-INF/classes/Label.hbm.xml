@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-7-21 23:35:04 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="blogsystem" dynamic-insert="false" dynamic-update="false" mutable="true" name="Label" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="label">
+        <id name="labelId" type="java.lang.Integer">
+            <column name="label_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="labelTitle" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="label_title" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="userId" optimistic-lock="true" type="int" unique="false">
+            <column name="user_id" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
